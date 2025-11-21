@@ -18,10 +18,8 @@ type AppState = 'input' | 'loading' | 'selection' | 'result';
 const getClient = () => {
     // Safety check for browser environment
     const apiKey = typeof process !== 'undefined' && process.env ? process.env.API_KEY : '';
-    // Note: In a real production app, you wouldn't expose the key this way, 
-    // but for this demo it relies on the env var being present.
     if (!apiKey) {
-        console.warn("API_KEY is missing. Please ensure it is set in your environment.");
+        console.warn("API_KEY is missing. The app may not function correctly.");
     }
     return new GoogleGenAI({ apiKey: apiKey || 'DUMMY_KEY' });
 };
@@ -248,7 +246,6 @@ const FinalReveal: React.FC<FinalRevealProps> = ({ selectedName, coupleData, onR
       setLoadingPrediction(false);
     };
     fetchPrediction();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -317,7 +314,7 @@ const App: React.FC = () => {
       setAppState('selection');
     } catch (error) {
       console.error(error);
-      alert("Cupid is busy right now (API Error). Check console for details.");
+      alert("Cupid is busy right now (API Error). Please try again!");
       setAppState('input');
     }
   };
