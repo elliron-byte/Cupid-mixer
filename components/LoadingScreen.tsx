@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeartIcon } from './HeartIcon';
+import { HeartIcon } from './HeartIcon.tsx';
 
 export const LoadingScreen: React.FC = () => {
   return (

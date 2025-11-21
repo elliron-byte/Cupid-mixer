@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeartIcon } from './HeartIcon';
+import { HeartIcon } from './HeartIcon.tsx';
 
 interface SelectionGridProps {
   names: string[];

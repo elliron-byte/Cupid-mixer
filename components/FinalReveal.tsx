@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { generateLovePrediction } from '../services/geminiService';
-import { HeartIcon } from './HeartIcon';
+import { generateLovePrediction } from '../services/geminiService.ts';
+import { HeartIcon } from './HeartIcon.tsx';
 
 interface FinalRevealProps {
   selectedName: string;

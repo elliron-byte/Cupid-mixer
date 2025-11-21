@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { InputForm } from './components/InputForm';
-import { SelectionGrid } from './components/SelectionGrid';
-import { FinalReveal } from './components/FinalReveal';
-import { LoadingScreen } from './components/LoadingScreen';
-import { generateCoupleNames } from './services/geminiService';
-import { AppState, CoupleData } from './types';
-import { HeartIcon } from './components/HeartIcon';
+import { InputForm } from './components/InputForm.tsx';
+import { SelectionGrid } from './components/SelectionGrid.tsx';
+import { FinalReveal } from './components/FinalReveal.tsx';
+import { LoadingScreen } from './components/LoadingScreen.tsx';
+import { generateCoupleNames } from './services/geminiService.ts';
+import { AppState, CoupleData } from './types.ts';
+import { HeartIcon } from './components/HeartIcon.tsx';
 
 const App: React.FC = () => {
   const [appState, setAppState] = useState<AppState>('input');

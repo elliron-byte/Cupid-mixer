@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HeartIcon } from './HeartIcon';
+import { HeartIcon } from './HeartIcon.tsx';
 
 interface InputFormProps {
   onGenerate: (name1: string, name2: string) => void;
